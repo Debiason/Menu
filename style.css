@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url(./components/image/compra-online.jpg);
+    font-family: "Montserrat", Arial;
+    color: white;
+    font-size: 2rem;
+}
+
+nav#tree {
+    margin-top: 45px;
+    max-width: 300px;
+}
+
+nav#tree ul {
+    padding-left: 26px;
+}
+
+nav#tree li {
+    list-style: none;
+    margin-top: 15px;
+    border-style: none none double none;
+}
+
+nav#tree li.has-children {
+    cursor: pointer;
+    position: relative;
+}
+
+nav#tree li.has-children:hover {
+    background-color: rgba(255, 255, 255, 0.767);
+    color: rgb(81, 158, 247);
+    border-radius: 6px;
+}
+
+
+/*
+nav#tree li.has-children:before {
+    content: "↓";
+    color: #F3F3F4;
+    position: absolute;
+    font-family: "FontAwesome";
+    font-size: 21px;
+    right: 15px;
+}*/
+
+span {
+    text-align: center;
+    width: 25px;
+    background-color: rgba(255, 255, 255, 0.767);
+    border-radius: 50%;
+    color: rgb(81, 158, 247);
+    position: absolute;
+    font-family: "FontAwesome";
+    height: bold;
+    font-size: 21px;
+    right: 15px;
+}
+
+span:hover {
+    background-color: green;
+}
+
+li>ul {
+    display: none;
+}
+
+li.open>ul {
+    display: block;
+}
+
+nav#tree li.open {
+    border-style: none;
+}
